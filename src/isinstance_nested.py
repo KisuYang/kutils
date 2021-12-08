@@ -4,8 +4,8 @@ import typing
 def isinstance_nested(x, typ, skim=True):
   '''
       Args:
-          skim (:obj:`str`):
-              The type of Tensor to return. Allowable values are "np", "pt" and "tf".
+          skim (:bool):
+              Check only the first item of List or Dict
 
       This function supports only int, str, typing.List and typing.Dict types
       so that you can use it to check if x is List, List[int], List[List[str]], List[Dict[str, List]] etc.
