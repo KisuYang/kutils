@@ -53,3 +53,6 @@ def isinstance_nested(x, typ, skim=True):
     result = result and _result
 
   return result
+
+if __name__ == '__main__':
+  result = isinstance_nested([{'a': [1, 2, 3]}], List[Dict[str, List[int]]]) # True
