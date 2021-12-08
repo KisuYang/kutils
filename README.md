@@ -1,2 +1,2 @@
 # kutils
-customized utils
+open-source utils created by Kisu Yang
