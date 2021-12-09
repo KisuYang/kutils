@@ -1,7 +1,7 @@
 from typing import TypeVar, List, Dict
 
 
-def isinstance_nested(x, typ, skim=True) -> bool:
+def isinstance_nested(x, typ, skim:bool=True) -> bool:
   '''
       Args:
           skim (:bool):
