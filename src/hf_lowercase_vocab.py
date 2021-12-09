@@ -2,7 +2,7 @@ import json
 import os.path as osp
 
 from collections import OrderedDict
-from transformers import AutoTokenizer
+from transformers import AutoModel, AutoTokenizer
 
 
 def hf_lowercase_vocab(tokenizer, keynet, uncased_vocab_dir='./uncased/'):
