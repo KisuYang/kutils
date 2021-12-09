@@ -2,7 +2,7 @@ import json
 import os.path as osp
 
 from collections import OrderedDict
-from transformers import AutoModel, AutoTokenizer
+from transformers import AutoModel, AutoTokenizer # transformers==4.12.5
 
 
 def hf_lowercase_vocab(tokenizer, keynet, uncased_vocab_dir='./uncased/'):
@@ -54,4 +54,4 @@ def hf_lowercase_vocab(tokenizer, keynet, uncased_vocab_dir='./uncased/'):
 if __name__ == '__main__':
   model = AutoModel.from_pretrained('monologg/kobigbird-bert-base') # BigBirdModel
   tokenizer = AutoTokenizer.from_pretrained('monologg/kobigbird-bert-base') # BertTokenizer
-  tokenizer, model = hf_lowercase_vocab(tokenizer, model) # transformers==4.12.5
+  tokenizer, model = hf_lowercase_vocab(tokenizer, model)
