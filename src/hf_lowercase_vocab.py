@@ -29,7 +29,7 @@ def hf_lowercase_vocab(tokenizer, keynet, uncased_vocab_dir='./uncased/'):
     assert i <= v
     lower2id_dict[k] = i
     lower_emb = keynet.embeddings.word_embeddings.weight[v]
-    lower_emb = lower_emb.detach().requires_grad_() # to make it a leaf embedding (new_token_emb.is_leaf == True)
+    lower_emb = lower_emb.detach().requires_grad_() # to make it a leaf embedding (lower_emb.is_leaf == True)
     keynet.embeddings.word_embeddings.weight[i].data.copy_(lower_emb)
 
   # resize
