@@ -1,5 +1,4 @@
-import typing
-from typing import List, Dict
+from typing import TypeVar, List, Dict
 
 
 def isinstance_nested(x, typ, skim=True) -> bool:
@@ -47,7 +46,7 @@ def isinstance_nested(x, typ, skim=True) -> bool:
         result = False # different or unsupported types
 
   else:
-    if type(typ) == typing.TypeVar: # when a leaf type is List or Dict, typ has ~T form.
+    if type(typ) == TypeVar: # when a leaf type is List or Dict, typ has ~T form.
       _result = True # whatever included
     else: # int, str etc.
       _result = type(x) == typ
@@ -56,5 +55,6 @@ def isinstance_nested(x, typ, skim=True) -> bool:
   return result
 
 
+# Usage
 if __name__ == '__main__':
   result = isinstance_nested([{'a': [1, 2, 3]}], List[Dict[str, List[int]]]) # True
