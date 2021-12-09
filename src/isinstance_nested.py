@@ -57,4 +57,5 @@ def isinstance_nested(x, typ, skim:bool=True) -> bool:
 
 # Usage
 if __name__ == '__main__':
+  # typing_extension==4.0.0
   result = isinstance_nested([{'a': [1, 2, 3]}], List[Dict[str, List[int]]]) # True
