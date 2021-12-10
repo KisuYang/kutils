@@ -46,7 +46,9 @@ def isinstance_nested(x, typ, skim:bool=True) -> bool:
         result = False # different or unsupported types
 
   else:
-    if hasattr(typ, '__origin__'): # if a leaf type is List or Dict which has no args
+    if typ == Any:
+      _result = result and True
+    elif hasattr(typ, '__origin__'): # if a leaf type is List or Dict which has no args
       _result = type(x) == typ.__origin__
     else: # int, str etc.
       _result = type(x) == typ
