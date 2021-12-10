@@ -7,7 +7,7 @@ def isinstance_nested(x, typ, skim:bool=True) -> bool:
           skim (:bool):
               Check only the first item of List or Dict
 
-      This function supports only int, str, typing.List and typing.Dict types
+      This function supports only int, str, typing.List, typing.Dict and typing.Any types
       so that you can use it to check if x is List, List[int], List[List[str]], List[Dict[str, List]] etc.
 
       Notice that
