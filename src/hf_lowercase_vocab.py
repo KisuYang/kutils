@@ -33,7 +33,7 @@ def hf_lowercase_vocab(tokenizer, keynet, uncased_vocab_dir='./uncased/'):
     keynet.embeddings.word_embeddings.weight[i].data.copy_(lower_emb)
 
   # resize
-  keynet.resize_token_embeddings(len(tokenizer))
+  keynet.resize_token_embeddings(len(lower2id_dict))
 
   # save lowercased vocab
   json_file['model']['vocab'] = lower2id_dict
