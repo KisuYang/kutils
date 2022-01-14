@@ -1,6 +1,8 @@
 def char_indices_to_token_indices(self, start_char_idx:int, end_char_idx:int, offsets:List[Tuple[int]], n_texts=1):
+  
   start_token_idx, end_token_idx = -100, -100
   special_token_count = 0
+  
   for i, (s, t) in enumerate(offsets):
     if s == t == 0:
       special_token_count += 1
@@ -10,6 +12,8 @@ def char_indices_to_token_indices(self, start_char_idx:int, end_char_idx:int, of
       if t >= end_char_idx:
         end_token_idx = i + 1
         break
+  
   if end_token_idx == -100:
     start_token_idx = -100
+
   return start_token_idx, end_token_idx
