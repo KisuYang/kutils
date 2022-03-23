@@ -9,9 +9,8 @@ def accurate_round(x:Union[int, float], ndigits:int=None):
   a = A / 10 ** i
   y = -a if x < 0 else a
   if type(x) is int or ndigits is None: # the same as built-in round()
-    return int(y)
-  else:
-    return y
+    y = int(y)
+  return y
   
 
 if __name__ == '__main__':
