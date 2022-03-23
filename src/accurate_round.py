@@ -8,7 +8,7 @@ def accurate_round(x:Union[int, float], ndigits:int=None):
   A = int(A) if A - int(A) < 0.5 else int(A) + 1 # round
   a = A / 10 ** i
   y = -a if x < 0 else a
-  if type(x) is int or ndigits is None: # the same as built-in round()
+  if type(x) is int or ndigits is None: # to be the same as built-in round()
     y = int(y)
   return y
   
