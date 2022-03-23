@@ -1,7 +1,7 @@
 from typing import Union
 
 
-def round(x:Union[int, float], ndigits:int=None):
+def accurate_round(x:Union[int, float], ndigits:int=None):
   a = -x if x < 0 else x # absolute
   i = 0 if ndigits is None else ndigits
   A = a * 10 ** i
