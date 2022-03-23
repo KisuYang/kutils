@@ -15,5 +15,5 @@ def accurate_round(x:Union[int, float], ndigits:int=None):
   
 
 if __name__ == '__main__':
-  assert round(2.5) == 3 # built-in round(2.5) returns 2
-  assert round(3.5) == 4 # built-in round(3.5) returns 4
+  assert accurate_round(2.5) == 3 # built-in round(2.5) returns 2
+  assert accurate_round(3.5) == 4 # built-in round(3.5) returns 4
