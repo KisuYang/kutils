@@ -11,7 +11,7 @@ def isinstance_nested(x, typ, skim:bool=True) -> bool:
       so that you can use it to check if x is List, List[int], List[List[str]], List[Dict[str, List]] etc.
 
       Notice that
-          x=[], typ=List[int] -> True
+          isinstance_nested(x=[], typ=List[int]) returns True
   '''
   result = True
 
