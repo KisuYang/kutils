@@ -1,3 +1,8 @@
+'''
+    Within 3 minutes, 300K documents can be deduplicated with 40 cores multiprocessing
+'''
+
+
 from os import cpu_count
 from copy import deepcopy
 from parmap import starmap
