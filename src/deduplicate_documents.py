@@ -1,5 +1,6 @@
 '''
-    Within 3 minutes, 300K documents can be deduplicated with 40 cores multiprocessing
+    Within 3 minutes, 300K documents can be deduplicated
+    by Locality Sensitive Hashing with 40 cores multiprocessing
 '''
 
 
