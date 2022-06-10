@@ -18,7 +18,7 @@ def shingling(text:str, k:int=10) -> Set[str]:
 def jaccard_similarity(set1:Set, set2:Set) -> float:
   return len(set1 & set2) / len(set1 | set2)
 
-def create_signature(document:str, key:Union[int, str], minhash:MinHash):
+def create_signature(document:str, key:Union[int, str], minhash:MinHash) -> Tuple[Union[int, str], MinHash]:
   minhash.update_batch([shingle.encode("utf-8") for shingle in shingling(document)])
   return (key, minhash)
 
